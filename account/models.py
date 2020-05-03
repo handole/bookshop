@@ -10,7 +10,7 @@ class User(AbstractUser):
         (1, 'author'),
         (2, 'buyer'),
     )    
-    user_type = models.PositiveSmallIntegerField(choices=TYPE_USER)
+    user_type = models.PositiveSmallIntegerField(choices=TYPE_USER, null=True, blank=True)
 
 
 class Buyer(models.Model):

@@ -1,7 +1,7 @@
-from django.contrib.auth.models import User
+# from .models import User
 from rest_framework import viewsets
 from rest_framework.response import Response
-from .models import Buyer
+from .models import Buyer, User
 from .serializers import UserSerializer, BuyerSerializer
 
 # Create your views here.

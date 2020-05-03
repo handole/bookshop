@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
+from django.conf import settings
 
 # Create your models here.
 class Category(models.Model):
@@ -16,7 +18,7 @@ class Book(models.Model):
     sinopsis = models.TextField()
     isbn = models.CharField(max_length=15, unique=True, null=True, blank=True)
     publication_date = models.DateTimeField(auto_now_add=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='author')
     timestamp = models.DateTimeField(auto_now_add=True)
 
     class Meta:
