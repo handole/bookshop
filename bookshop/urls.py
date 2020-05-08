@@ -9,6 +9,6 @@ urlpatterns = [
     path('api/doc/', schema_view),
     path('account/', include('account.urls')),
     path('book/', include('book.urls')),
-    path('order/', include('order.urls')),
+    # path('order/', include('order.urls')),
     
 ]

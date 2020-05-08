@@ -10,12 +10,12 @@ class OrderDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = OrderDetail
-        fields = ['order_header', 'book', 'qty', 'total']
+        fields = ['book', 'qty', 'total']
 
 class OrderHeaderSerializer(serializers.ModelSerializer):
     OrderDetailHeader = OrderDetailSerializer(many=True)
 
     class Meta:
         model = OrderHeader
-        fields = ['created_at', 'buyer', 'bank', 'bayar']
+        fields = ['created_at', 'buyer', 'bank', 'bayar', 'orderDetailHeader']
 

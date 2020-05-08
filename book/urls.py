@@ -4,6 +4,6 @@ from .views import BookViewset, StockViewSet
 
 router = DefaultRouter()
 router.register(r'', BookViewset, basename='book')
-router.register(r'stock', StockViewSet, basename='stock')
+router.register(r'stocks', StockViewSet, basename='stocks')
 
 urlpatterns = router.urls
